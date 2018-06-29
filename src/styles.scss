@@ -1,1 +1,334 @@
 /* You can add global styles to this file, and also import other style files */
+// Variáveis
+$amarelo1: #d19b35;
+$azul1: #aaa8f3;
+@font-face {
+	font-family: 'TrajanProRegular';
+	src: url('./assets/fonts/TrajanProRegular.eot');
+	src: local('TrajanProRegular'), url('./assets/fonts/TrajanProRegular.woff') format('woff'), url('./assets/fonts/TrajanProRegular.ttf') format('truetype');
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    background-color: #353465;
+    color: $azul1;
+}
+body{
+    font-family: 'TrajanProRegular' !important;
+}
+ul{
+    list-style: none;
+    margin: auto;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5{
+    text-transform: uppercase;
+    margin: auto;
+    font-weight: normal;
+    &.line{
+        border-bottom: $azul1 - 99 .5px solid;
+        text-align: center;
+        color: #fff;
+        span{
+            display: table;
+            margin: auto;
+            padding: 5px 10px;
+            border-bottom: $azul1 1px solid;
+        }
+    }
+}
+p{
+    margin: auto;
+    line-height: 18px;
+    font-size: 13px;
+}
+
+
+// Bootstrap Replaces
+.btn{
+    border-radius: 0;
+    -mox-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 11px;
+    margin: 2px;
+    font-weight: bold;
+    &.btn-primary{
+        background-color: transparent;
+        border-color: $azul1;
+        color: $azul1;
+        &:hover{
+            background-color: $azul1;
+            color: #fff;
+        }
+    }
+    &.btn-full{
+        width: 100%;
+    }
+}
+.row{
+    &.no-space{
+        margin-left: 0;
+        margin-right: 0;
+        .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }    
+}
+.small{
+    font-size: 11px;
+}
+img{
+    &.img-responsive{
+        max-width: 100%;
+    }
+    &.img-center{
+        margin: auto;
+    }
+}
+
+// Margins
+.mtop-5{
+    margin-top: 5px !important;
+}
+.mbottom-5{
+    margin-bottom: 5px !important;
+}
+.mtop-15{
+    margin-top: 15px !important;
+}
+.mbottom-15{
+    margin-bottom: 15px !important;
+}
+.mtop-30{
+    margin-top: 30px !important;
+}
+.mbottom-30{
+    margin-bottom: 30px !important;
+}
+.mtop-50{
+    margin-top: 50px !important;
+}
+.mbottom-50{
+    margin-bottom: 50px !important;
+}
+.ptop-5{
+    padding-top: 5px !important;
+}
+// Paddings
+.pbottom-5{
+    padding-bottom: 5px !important;
+}
+.ptop-15{
+    padding-top: 15px !important;
+}
+.pbottom-15{
+    padding-bottom: 15px !important;
+}
+.ptop-30{
+    padding-top: 30px !important;
+}
+.pbottom-30{
+    padding-bottom: 30px !important;
+}
+.ptop-50{
+    padding-top: 50px !important;
+}
+.pbottom-50{
+    padding-bottom: 50px !important;
+}
+
+//Allign
+.text-center{
+    text-align: center !important;
+}
+.text-left{
+    text-align: left !important;
+}
+.text-right{
+    text-align: right !important;
+}
+
+// Mapa
+.box-mapa{
+    .header-mapa{
+        border: $azul1 - 99 .5px solid;
+        padding: 30px 15px;
+        p{
+            color: $amarelo1;
+            font-size: 13px;
+        }
+        address{
+            color: $azul1;
+            font-weight: bold;
+            font-style: normal;
+            font-size: 16px;
+        }
+    }
+}
+
+
+// Formulários
+// .line-form{
+//     position: relative;
+//     label{
+//         position: absolute;
+//         top: 15px;
+//         left: 0;
+//         color: $azul1;
+//         transition: .5s;
+//         pointer-events: none;
+//     }
+//     input, select, textarea{
+//         padding: 15px 0 10px 0;
+//         border: none;
+//         border-bottom: $azul1 1px solid;
+//         background: none;
+//         margin-bottom: 15px;
+//         width: 100%;
+
+//         &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+//             color: transparent;
+//             opacity: 1; /* Firefox */
+//         }
+        
+//         &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+//             color: transparent;
+//         }
+        
+//         &::-ms-input-placeholder { /* Microsoft Edge */
+//             color: transparent;
+//         }
+
+//         &:focus{
+//             outline: none;   
+//             &~ label{
+//                 top: 0;
+//                 font-size: 10px;
+//             }              
+//         }
+//         &:not(:placeholder-shown) + label{
+//             top: 0;
+//             font-size: 10px;
+//         }
+//     }
+// }
+
+
+
+// Anumações
+.scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2018-6-26 21:54:42
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-in-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* ----------------------------------------------
+ * Generated by Animista on 2018-6-26 22:5:25
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/* ----------------------------------------------
+ * Generated by Animista on 2018-6-26 22:7:7
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/* ----------------------------------------------
+ * Generated by Animista on 2018-6-26 22:10:34
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/* ----------------------------------------------
+ * Generated by Animista on 2018-6-26 22:13:22
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation flip-in-hor-top
+ * ----------------------------------------
+ */
+ @-webkit-keyframes flip-in-hor-top {
+    0% {
+      -webkit-transform: rotateX(-80deg);
+              transform: rotateX(-80deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes flip-in-hor-top {
+    0% {
+      -webkit-transform: rotateX(-80deg);
+              transform: rotateX(-80deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+      opacity: 1;
+    }
+  }   
+  
+  
+
+// XS Media
+@media(max-width:768px){
+    // Mapa
+    .box-mapa{
+        margin-bottom: 15px;
+        .header-mapa{
+            padding: 15px;
+            border: none;
+            border: $azul1 - 99 1px solid;            
+            p{
+                font-size: 12px;
+            }
+            address{
+                font-size: 14px;
+            }
+        }
+    }
+}
+  
